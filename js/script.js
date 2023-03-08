@@ -2,17 +2,17 @@
 function generateStars(quantity) {
     let star = '<div class="star"></div>'
 
-    for (let i = 0; i < quantity; i++) {
-        $(".space").append(star)
-    }
-}
+    let colors = ['red', 'green', 'blue']; 
 
-//function setStarsID() {
- //   $( ".star" ).each(function( index ) {
-  //      $( this ).attr("id", index);
-       // console.log($(this).attr("id"))
- //   });
-//}
+    $('.space').each(function(index) {
+        for(let i = 0; i < quantity; i++)   {
+            $(this).append(star)
+        }
+
+        $(this).find('.star').css('background-color', colors[index]); 
+      });
+
+}
 
 function setStarsPosition() {
     width = $(".space").width()
@@ -26,5 +26,18 @@ function setStarsPosition() {
 
 }
 
-generateStars(1000)
-setStarsPosition()
+ 
+  $(document).ready(function() {
+    generateStars(200)
+    setStarsPosition()
+    
+  });
+
+  $(window).scroll(function() {
+    let value = window.scrollY;
+    let parallaxValues = ['0.5', '0.25', '0.125']; 
+
+    $('.space').each(function(index) {
+        $(this).css("top" , value * parallaxValues[index] + 'px')
+    });
+  })
