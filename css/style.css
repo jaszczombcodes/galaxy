@@ -60,9 +60,9 @@
     height: 800px;
     width: 800px;
     position: absolute;
-    top: 10%;
-    left: 20%;
-    animation: spotspinning 50s linear 0s infinite normal forwards;
+    top: 5%;
+    left: 10%;
+    animation: spotspinning 300s linear 0s infinite normal forwards;
 }
 .darkspot {
     height: 100%;
