@@ -8,30 +8,40 @@ function generateStars(quantity) {
         }
     });
 
-    $('.space-darkspot').each(function() {
+    $('.left-spot').each(function() {
         for(let i = 0; i < quantity/2; i++)   {
+            $(this).append(star)
+        }
+    });
+
+    $('.right-spot').each(function() {
+        for(let i = 0; i < quantity/4; i++)   {
             $(this).append(star)
         }
     });
 }
 
 function starsPosition() {
-    let widthSpace = $(".space").width()
     let heightSpace = $(".space").height()
 
-    let widthSpot = $(".darkspot-holder").width()
-    let heightSpot = $(".darkspot-holder").height()
+    let widthLeftSpot = $(".left-spot").width()
+    let heightLeftSpot = $(".left-spot").height()
+
+    let widthRightSpot = $(".right-spot").width()
+    let heightRightSpot = $(".right-spot").height()
 
     let space = $(".star")
-    let spot = $('.space-darkspot').find(".star")
+    let spot1 = $('.left-spot').find(".star")
+    let spot2 = $('.right-spot').find(".star")
 
    // console.log(widthSpot, heightSpot)
-    settingStars(space, widthSpace, heightSpace)
-    settingSpot(spot, widthSpot, heightSpot)
+    settingStars(space, heightSpace)
+    settingSpot(spot1, widthLeftSpot, heightLeftSpot)
+    settingSpot(spot2, widthRightSpot, heightRightSpot)
 
 }
 
-function settingStars(elements, width, height) {
+function settingStars(elements, height) {
     elements.each(function() {
         let marginTop = Math.floor(Math.random() * height) 
         let marginLeft = Math.floor(Math.random() * 100)
@@ -47,7 +57,7 @@ function settingSpot(elements, width, height) {
     let centerX = width / 2;
     let centerY = height / 2;
     let radius = Math.min(width, height);
-    let maxDensity = 10; 
+    let maxDensity = 4; 
 
     elements.each(function() {
       let angle = Math.random() * 2 * Math.PI;
@@ -75,8 +85,8 @@ function parallaxEffect () {
         })
     });
 
-    $('.darkspot').css({
-        "top" : value * 0.5 + 'px'
+    $('.left-spot').css({
+        "top" : value * 0.4 + 'px'
     })
 }
 
