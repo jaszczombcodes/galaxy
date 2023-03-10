@@ -34,11 +34,11 @@ function starsPosition() {
 function settingStars(elements, width, height) {
     elements.each(function() {
         let marginTop = Math.floor(Math.random() * height) 
-        let marginLeft = Math.floor(Math.random() * width) 
+        let marginLeft = Math.floor(Math.random() * 100)
 
         $(this).css({
             'top': marginTop, 
-            'left': marginLeft
+            'left': marginLeft + '%'
         })
     });
 }
