@@ -1,4 +1,5 @@
 
+
 :root {
     --galaxy-dark: #0C0D0F;
     --galaxy-dark-blue: rgb(10, 35, 87);
@@ -12,6 +13,7 @@
 }
 .body {
     scroll-behavior: auto;
+    font-family: 'Poppins', sans-serif;
 }
 .container {
     width: 100%;
@@ -21,6 +23,12 @@
     position: relative;
 
 }
+.flex {
+    display: flex;
+}
+
+/* Background */
+
 .spot-holder {  
     position: absolute;
     animation: spotspinning 300s linear 0s infinite normal forwards;
@@ -111,4 +119,36 @@
 	100% {
 		transform: rotate(360deg);
 	}
+}
+
+/* Navbar */
+
+.nav {
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+.nav-list {
+    width: 100%;
+    max-width: 700px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-item {
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Poppins', sans-serif;
+}
+.logo {
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    width: 150px;
+}
+
+.logo .navbutton {
+    max-width: 200px;
 }
