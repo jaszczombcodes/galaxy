@@ -1,6 +1,8 @@
 
 :root {
     --galaxy-dark: #0C0D0F;
+    --galaxy-dark-blue: rgb(10, 35, 87);
+    --galaxy-dark-pink: rgb(92, 23, 86);
 }
 * {
     margin: 0;
@@ -19,6 +21,40 @@
     position: relative;
 
 }
+.spot-holder {  
+    position: absolute;
+    animation: spotspinning 300s linear 0s infinite normal forwards;
+}
+.left-spot {
+    height: 500px;
+    width: 500px;
+    margin-top: 10%;
+    left: 10%;
+}
+.right-spot {
+    height: 300px;
+    width: 300px;
+    right: 10%;
+}
+.spot {
+    height: 100%;
+    width: 100%;
+    border-radius: 82% 18% 79% 21% / 71% 27% 73% 29%;
+    position: absolute;
+}
+.spot .star {
+    filter: none;
+}
+.bluespot {
+    background-color: var(--galaxy-dark-blue);
+    filter: blur(18em);
+}
+
+.pinkspot {
+    background-color: var(--galaxy-dark-pink);
+    filter: blur(12em);
+}
+
 .space {
     background-color: transparent; 
     width: 100%;
@@ -56,45 +92,15 @@
     box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.25);
 }
 
-.spot-holder {  
+.earth {
+    width: 800px;
     position: absolute;
-    animation: spotspinning 300s linear 0s infinite normal forwards;
+    right: -20px;
+    top: 400px;
 }
 
-.left-spot {
-    height: 500px;
-    width: 500px;
-    margin-top: 10%;
-    left: 10%;
-}
-
-.right-spot {
-    height: 300px;
-    width: 300px;
-    right: 10%;
-    bottom: 0;
-}
-
-.spot {
-    height: 100%;
+.earth img {
     width: 100%;
-    border-radius: 82% 18% 79% 21% / 71% 27% 73% 29%;
-    position: absolute;
-    
-}
-
-.spot .star {
-    filter: none;
-}
-
-.bluespot {
-    background-color: rgb(10, 35, 87);
-    filter: blur(18em);
-}
-
-.pinkspot {
-    background-color: rgb(92, 23, 86);
-    filter: blur(12em);
 }
 
 @keyframes spotspinning {
