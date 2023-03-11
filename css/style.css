@@ -11,6 +11,14 @@
     list-style: none;
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family: Phonk;
+    src: url(../font/PhonkContrastDEMO.otf);
+    font-weight: bold;
+}
+
+
 .body {
     scroll-behavior: auto;
     font-family: 'Poppins', sans-serif;
@@ -77,6 +85,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
 }
 
 .star {
@@ -133,6 +142,7 @@
     align-items: center;
     font-size: 16px;
     position: relative;
+    z-index: 1;
 }
 .nav-static {
     height: 110px;
@@ -171,15 +181,17 @@
     cursor: pointer;
 }
 .btn {
-    position: relative;
     padding: 1em 1.75em;
     display: inline-block;
     z-index: 0;
-    background-color: transparent;
-    border: none;
     border-radius: 50em;
+    border: none;
 }
-.btn::before {
+.nav-btn {
+    position: relative;
+    background-color: transparent;
+}
+.nav-btn::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -199,7 +211,7 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
 }
-.btn:hover {
+.nav-btn:hover {
     background: linear-gradient(to right, hsl(216, 100%, 56%), #f262ff);
 }
 
@@ -217,5 +229,40 @@
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 
+/* header */
 
-
+main {
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 70px;
+    flex-direction: column;
+}
+.header h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Phonk;
+    font-size: 6em;
+    line-height: 1;
+    
+}
+.header p {
+    color: white;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-block: 24px;
+    line-height: 2;
+}
+.header-btn {
+    font-size: 1.125em;
+    box-shadow: inset 0px 18px 9px -16px rgba(255, 255, 255, 1);
+    background: linear-gradient(to right, hsl(216, 100%, 56%), #f262ff);
+}
