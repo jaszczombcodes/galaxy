@@ -1,7 +1,9 @@
 :root {
     --galaxy-dark: #0C0D0F;
     --galaxy-dark-blue: rgb(10, 35, 87);
+    --galaxy-light-blue: hsl(216, 100%, 56%);
     --galaxy-dark-pink: rgb(92, 23, 86);
+    --galaxy-light-pink: #f262ff;
 }
 * {
     margin: 0;
@@ -141,9 +143,27 @@
     max-width: 700px;
     align-items: center;
     justify-content: space-evenly;
+    counter-reset: section;
 }
 .nav-item {
     font-family: 'Poppins', sans-serif;
+}
+.nav-item::before {
+    counter-increment: section;
+    content: "0" counter(section);
+    margin-inline-end: 10px;
+    font-size: 0.75em;
+    background: -webkit-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
+    background: -moz-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
+    background: -o-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
+    background: linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.nav-item a {
+    text-decoration: none;
+    color: white;
 }
 .nav-item, .btn {
     font-size: 1em;
@@ -166,10 +186,10 @@
     inset: 0;
     padding: 2px;
     border-radius: 50em;
-    background: -webkit-linear-gradient(to right, hsl(216, 100%, 56%), #f262ff);
-    background: -moz-linear-gradient(to right, hsl(216, 100%, 56%), #f262ff);
-    background: -o-linear-gradient(to right, hsl(216, 100%, 56%), #f262ff);
-    background: linear-gradient(to right, hsl(216, 100%, 56%), #f262ff);
+    background: -webkit-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
+    background: -moz-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
+    background: -o-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
+    background: linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
     -webkit-mask: 
         linear-gradient(#fff 0 0) content-box, 
         linear-gradient(#fff 0 0);
