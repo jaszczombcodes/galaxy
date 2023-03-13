@@ -23,6 +23,7 @@
 .body {
     scroll-behavior: auto;
     font-family: 'Poppins', sans-serif;
+    color: white;
 }
 .container {
     width: 100%;
@@ -421,6 +422,9 @@ main {
 .flexbox-left-2 .glassbox {
     height: 100%;
 }
+.flexbox-left-2 .header {
+    padding: 30px 0;
+}
 .about-texts {
     padding-block: 20px;
 }
@@ -454,6 +458,34 @@ main {
     margin-inline-end: 10px;
     font-size: 0.75em;
 }
+
+/* counting section */
+
 .section-counting {
     color: white;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: 30px 60px;
+}
+.num-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px;
+}
+.num {
+    font-size: 4.5em;
+    position: relative;
+}
+.plus::before {
+    content: "+";
+}
+.procent::after {
+    content: "%";
+}
+.num, .num-container h3 {
+    text-align: center; 
 }
