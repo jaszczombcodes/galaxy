@@ -4,6 +4,7 @@
     --galaxy-light-blue: hsl(216, 100%, 56%);
     --galaxy-dark-pink: rgb(92, 23, 86);
     --galaxy-light-pink: #f262ff;
+    --light-text: rgba(255, 255, 255, 0.85);
 }
 * {
     margin: 0;
@@ -348,7 +349,7 @@ main {
 .glassbox {
     width: 100%;
     position: relative;
-    padding: 80px 50px;
+    padding: 60px;
     
     background: rgb(10,35,87);
     background: linear-gradient(30deg, rgba(124, 11, 168, 0.2) 0%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.5) 100%);
@@ -407,14 +408,49 @@ main {
 
 .section-about {
     width: 100%;
-    gap: 32px
+    gap: 32px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 .flexbox-left-2 {
     flex-direction: column;
     gap: 32px;
     width: 100%;
-    height: 500px;
 }
 .flexbox-left-2 .glassbox {
     height: 100%;
+}
+.about-texts {
+    padding-block: 20px;
+}
+.about-text:last-child {
+    margin-block-start: 50px;
+}
+.about-text h3 {
+    font-size: 1.25em;
+}
+.about-text p {
+    font-size: 1em;
+    font-style: italic;
+    margin-block-start: 16px;
+    color: var(--light-text);
+    border-left: solid 3px;
+    padding-left: 20px;
+    border-image: 
+    linear-gradient(
+        to bottom,
+        var(--galaxy-light-blue),
+        var(--galaxy-light-pink)
+    ) 1 100%;
+}
+.about-text span {
+    text-transform: uppercase;
+    font-size: 0.75em;
+    color:#f262ff;
+}
+.about-text h3::before {
+    content: "\25B6";
+    margin-inline-end: 10px;
+    font-size: 0.75em;
 }
