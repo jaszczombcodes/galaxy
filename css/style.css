@@ -489,3 +489,21 @@ main {
 .num, .num-container h3 {
     text-align: center; 
 }
+
+/* prices */
+.section-prices {
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+.section-prices .header {
+    padding: 30px 0;
+    width: 100%;
+}
+.plans {
+    width: 100%;
+    gap: 32px;
+}
+.plan {
+    height: 500px;
+}
