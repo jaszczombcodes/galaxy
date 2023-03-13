@@ -99,3 +99,23 @@ function parallaxEffect () {
   $(window).scroll(function() {
     parallaxEffect()
   })
+
+
+  let valueDisplays = $(".num");
+  let interval = 4000;
+  
+  valueDisplays.each(function() {
+    let startValue = 0;
+    let displayElement = $(this);
+    let endValue = displayElement.data("value");
+    
+  
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(function () {
+        startValue += 1;
+        displayElement.text(startValue);
+        if(startValue == endValue) {
+            clearInterval(counter);
+        }
+    }, duration);
+  });
