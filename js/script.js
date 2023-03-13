@@ -91,31 +91,51 @@ function parallaxEffect () {
 }
 
  
-  $(document).ready(function() {
+$(document).ready(function() {
     generateStars(100)
     starsPosition()
-  });
 
-  $(window).scroll(function() {
+});
+
+$(window).scroll(function() {
     parallaxEffect()
-  })
+})
 
 
-  let valueDisplays = $(".num");
-  let interval = 4000;
-  
-  valueDisplays.each(function() {
-    let startValue = 0;
-    let displayElement = $(this);
-    let endValue = displayElement.data("value");
+$(document).ready(function() {
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.25 
+    };
     
-  
-    let duration = Math.floor(interval / endValue);
-    let counter = setInterval(function () {
-        startValue += 1;
-        displayElement.text(startValue);
-        if(startValue == endValue) {
-            clearInterval(counter);
-        }
-    }, duration);
-  });
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) { 
+                const valueDisplays = entry.target.querySelectorAll(".num");
+                const interval = 4000;
+    
+                valueDisplays.forEach(valueDisplay => {
+                    let startValue = 0;
+                    let endValue = valueDisplay.dataset.value;
+            
+                    let duration = Math.floor(interval / endValue);
+                    let counter = setInterval(() => {
+                        startValue += 1;
+                        valueDisplay.textContent = startValue;
+                        if (startValue == endValue) {
+                            clearInterval(counter);
+                        }
+                    }, duration);
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+    
+
+    const elements = document.querySelectorAll(".section-counting");
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
