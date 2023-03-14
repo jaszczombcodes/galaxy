@@ -4,7 +4,8 @@
     --galaxy-light-blue: hsl(216, 100%, 56%);
     --galaxy-dark-pink: rgb(92, 23, 86);
     --galaxy-light-pink: #f262ff;
-    --light-text: rgba(255, 255, 255, 0.85);
+    --light-text: rgb(240, 240, 240);
+    --dark-text: rgb(85, 85, 85);
 }
 * {
     margin: 0;
@@ -354,7 +355,7 @@ main {
     
     background: rgb(10,35,87);
     background: linear-gradient(30deg, rgba(124, 11, 168, 0.2) 0%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.5) 100%);
-    border-radius: 64px;
+    border-radius: 32px;
 
     -webkit-box-shadow: inset 0px 11px 11px 3px rgba(255, 255, 255, 1);
     -moz-box-shadow: inset 0px 11px 11px 3px rgba(255, 255, 255, 1);
@@ -488,6 +489,7 @@ main {
 }
 .num, .num-container h3 {
     text-align: center; 
+    font-weight: 200;
 }
 
 /* prices */
@@ -505,5 +507,64 @@ main {
     gap: 32px;
 }
 .plan {
-    height: 500px;
+    flex-direction: column;
+}
+.planbox {
+    width: 100%;
+    position: relative;
+    border-radius: 32px;
+
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+.plan-header {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+.plan-price {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+.plan-price h3 {
+    text-align: center;
+    font-size: 4em;
+    font-weight: 700;
+    margin-block-start: 30px;
+}
+.plan-benefits p {
+    font-weight: 200;
+}
+.plan-benefits {
+    padding: 30px 60px 60px 60px;
+}
+.benefits-list {
+    margin-block-start: 16px;
+}
+.benefit-item {
+    position: relative;
+    color: var(--dark-text);
+    margin: 6px 0;
+    font-weight: 300;
+}
+.benefit-item::before {
+    content: '\002714';
+    padding-inline-end: 6px;
+    color: 	transparent;
+}
+.greencheck {
+    color: white;
+    font-weight: 400;
+}
+.greencheck::before {
+    content: '\002714';
+    padding-right: 6px;
+    color: 	var(--galaxy-light-blue);
 }
