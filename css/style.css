@@ -32,7 +32,6 @@
     background-color: var(--galaxy-dark);
     position: relative;
     justify-content: center;
-
 }
 .content {
     width: 90%;
@@ -93,7 +92,6 @@ img {
     -webkit-filter: blur(12em);
     filter: blur(12em);
 }
-
 .space {
     background-color: transparent; 
     width: 100%;
@@ -104,7 +102,6 @@ img {
     left: 0;
     z-index: 0;
 }
-
 .star {
     position: absolute;
     width: 1px;
@@ -117,21 +114,18 @@ img {
     box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.4);
     z-index: 10;
 }
-
 .far .star{
     background-color: rgba(255, 255, 255, 0.5);
     -webkit-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.5);
     -moz-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.5);
     box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.1);
 }
-
 .near .star {
     background-color: rgba(255, 255, 255);
     -webkit-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.5);
     -moz-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.5);
     box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.25);
 }
-
 .earth {
     width: 900px;
     position: absolute;
@@ -141,6 +135,7 @@ img {
 
 
 /* Navbar */
+
 .nav {
     width: 100%;
     align-items: center;
@@ -265,6 +260,10 @@ main {
     font-size: 6em;
     line-height: 1;
     white-space: nowrap;
+}
+.header h2 {
+    font-size: 5em;
+    padding: 30px 0;
 }
 .header p {
     color: white;
@@ -422,14 +421,14 @@ main {
 .flexbox-left-2 .glassbox {
     height: 100%;
 }
-.flexbox-left-2 .header {
-    padding: 30px 0;
-}
 .about-texts {
     padding-block: 20px;
 }
-.about-text:last-child {
+.about-text {
     margin-block-start: 50px;
+}
+.about-text:first-child {
+    margin-block-start: 0;
 }
 .about-text h3 {
     font-size: 1.25em;
@@ -498,7 +497,6 @@ main {
     width: 100%;
 }
 .section-prices .header {
-    padding: 30px 0;
     width: 100%;
 }
 .plans {
@@ -626,9 +624,14 @@ main {
 }
 
 /* swiper */
-
+.section-swiper {
+    width: 100%;
+    flex-direction: column;
+}
+.section-swiper h2{
+    margin-block: 30px 60px;
+}
 .swiper-holder {
-    margin-block-start: 60px;
     position: relative;
     height: 700px;
     width: 100%;
@@ -636,6 +639,7 @@ main {
 .swiper {
     width: 100%;
     height: 100%;
+    border-radius: 32px;
 }
 .swiper-slide {
     text-align: center;
@@ -673,7 +677,7 @@ main {
     width: 100%;
     height: 100%;
     stroke-width: 4px;
-    stroke: var(--swiper-theme-color);
+    stroke: var(--galaxy-light-blue);
     fill: none;
     stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
     stroke-dasharray: 125.6;
