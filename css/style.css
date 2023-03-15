@@ -653,6 +653,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: grab;
 }
 .swiper-slide img {
     display: block;
