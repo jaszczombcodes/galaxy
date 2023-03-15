@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Document</title>
 </head>
 <body>
@@ -139,7 +140,7 @@
                         <h2>Buy a plan</h2>
                     </div>
                     <div class="plans flex">
-                        <fieldset class="plan planbox flex">
+                        <fieldset class="plan blackglassbox flex">
                             <legend class="plan-header">Starter</legend>
                             <div class="plan-price">
                                 <h3>149$</h3>
@@ -160,7 +161,7 @@
                                 <button class="btn color-btn">Buy a plan</button>
                             </div>
                         </fieldset>
-                        <fieldset class="plan planbox">
+                        <fieldset class="plan blackglassbox">
                             <legend class="plan-header">Pro</legend>
                             <div class="ribbon">
                                 <span>Best value</span>
@@ -184,7 +185,7 @@
                                 <button class="btn color-btn">Buy a plan</button>
                             </div>
                         </fieldset>
-                        <fieldset class="plan planbox">
+                        <fieldset class="plan blackglassbox">
                             <legend class="plan-header">Premium</legend>
                             <div class="plan-price">
                                 <h3>399$</h3>
@@ -206,6 +207,30 @@
                             </div>
                         </fieldset>
                     </div>
+                </section>
+                <section class="swiper-holder">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">Slide 1</div>
+                          <div class="swiper-slide">Slide 2</div>
+                          <div class="swiper-slide">Slide 3</div>
+                          <div class="swiper-slide">Slide 4</div>
+                          <div class="swiper-slide">Slide 5</div>
+                          <div class="swiper-slide">Slide 6</div>
+                          <div class="swiper-slide">Slide 7</div>
+                          <div class="swiper-slide">Slide 8</div>
+                          <div class="swiper-slide">Slide 9</div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="autoplay-progress">
+                          <svg viewBox="0 0 48 48">
+                            <circle cx="24" cy="24" r="20"></circle>
+                          </svg>
+                          <span></span>
+                        </div>
+                      </div>
                 </section>
                 <section class="section-counting flex">
                     <div class="num-container">
@@ -231,6 +256,9 @@
         </div>
     </div>
 
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/script.js"></script>
 </body>

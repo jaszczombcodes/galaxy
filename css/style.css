@@ -508,7 +508,7 @@ main {
 .plan {
     flex-direction: column;
 }
-.planbox {
+.blackglassbox {
     width: 100%;
     position: relative;
     border-radius: 32px;
@@ -617,8 +617,65 @@ main {
     width: 200px;
     background: linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
     padding: 10px 0;
-    color: #fff;
+    color: white;
     text-align: center;
-    font-size: 17px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
     box-shadow: 0 5px 10px rgba(0,0,0,0.12);
-  }
+}
+
+/* swiper */
+
+.swiper-holder {
+    margin-block-start: 60px;
+    position: relative;
+    height: 700px;
+    width: 100%;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+}
+.autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+}
