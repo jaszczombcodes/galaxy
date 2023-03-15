@@ -1,8 +1,8 @@
 :root {
     --galaxy-dark: #0C0D0F;
-    --galaxy-dark-blue: rgb(10, 35, 87);
+    --galaxy-dark-blue: rgb(14, 44, 110);
     --galaxy-light-blue: hsl(216, 100%, 56%);
-    --galaxy-dark-pink: rgb(92, 23, 86);
+    --galaxy-dark-pink: rgba(192, 51, 197, 0.5);
     --galaxy-light-pink: #f262ff;
     --light-text: rgb(240, 240, 240);
     --dark-text: rgb(85, 85, 85);
@@ -28,7 +28,6 @@
 }
 .container {
     width: 100%;
-    height: 3000px;
     overflow: hidden;
     background-color: var(--galaxy-dark);
     position: relative;
@@ -217,7 +216,7 @@ img {
     mask-composite: exclude;
 }
 .nav-btn:hover {
-    background: linear-gradient(to right, hsl(216, 100%, 56%), #f262ff);
+    background: linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
 }
 
 .logo .navbutton {
@@ -275,12 +274,12 @@ main {
     margin-block: 24px;
     line-height: 2;
 }
-.header-btn {
+.color-btn {
     font-size: 1.125em;
     -webkit-box-shadow: inset 0px 18px 9px -16px rgba(255, 255, 255, 1);
     -moz-box-shadow: inset 0px 18px 9px -16px rgba(255, 255, 255, 1);
     box-shadow: inset 0px 18px 9px -16px rgba(255, 255, 255, 1);
-    background: linear-gradient(to right, hsl(216, 100%, 56%), #f262ff);
+    background: linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
 }
 
 /* box article */
@@ -354,7 +353,7 @@ main {
     padding: 60px;
     
     background: rgb(10,35,87);
-    background: linear-gradient(30deg, rgba(124, 11, 168, 0.2) 0%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(30deg, var(--galaxy-dark-blue) -80%, rgba(0,0,0,0.5) 60%, rgba(0, 0, 0, 0.5) 100%);
     border-radius: 32px;
 
     -webkit-box-shadow: inset 0px 11px 11px 3px rgba(255, 255, 255, 1);
@@ -452,7 +451,7 @@ main {
 .about-text span {
     text-transform: uppercase;
     font-size: 0.75em;
-    color:#f262ff;
+    color:var(--galaxy-light-pink);
 }
 .about-text h3::before {
     content: "\25B6";
@@ -567,4 +566,15 @@ main {
     content: '\002714';
     padding-right: 6px;
     color: 	var(--galaxy-light-blue);
+}
+.plan-btn {
+    padding-block-start: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    position: relative;
+}
+.plan-btn .btn {
+    position: absolute;
 }
