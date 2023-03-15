@@ -578,3 +578,47 @@ main {
 .plan-btn .btn {
     position: absolute;
 }
+.ribbon {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top:-38px;
+    left: -9px;
+    overflow: hidden;
+}
+.ribbon::before,
+.ribbon::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+    display: block;
+    border: 4px solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    filter: brightness(50%);
+}
+.ribbon::before{
+    top: 0px;
+    right: 15px;
+    border-color: var(--galaxy-light-pink);
+}
+.ribbon::after{
+    bottom: 15px;
+    left: 0px;
+    border-color: var(--galaxy-light-blue);
+}
+.ribbon span{
+    position: absolute;
+    top:30px;
+    right: 0;
+    transform: rotate(-45deg);
+    width: 200px;
+    background: linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+  }
