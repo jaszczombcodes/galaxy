@@ -2,11 +2,11 @@
     --galaxy-dark: #0C0D0F;
     --galaxy-dark-blue: rgb(14, 44, 110);
     --galaxy-light-blue: hsl(216, 100%, 56%);
-    --galaxy-dark-pink: rgba(192, 51, 197, 0.5);
     --galaxy-light-pink: #f262ff;
     --light-text: rgb(240, 240, 240);
     --mid-text: rgb(161, 161, 161);
     --dark-text: rgb(85, 85, 85);
+    --gradient-blue: linear-gradient(90deg, var(--galaxy-light-blue), transparent) var(--galaxy-dark-blue);
 }
 * {
     margin: 0;
@@ -85,18 +85,16 @@ img {
     -moz-filter: none;
     filter: none;
 }
-.bluespot {
+.blue-spot {
     background-color: var(--galaxy-dark-blue);
-    -webkit-filter: blur(18em);
-    -moz-filter: blur(18em);
-    filter: blur(18em);
 }
-
-.pinkspot {
-    background-color: var(--galaxy-dark-pink);
-    -webkit-filter: blur(12em);
-    -moz-filter: blur(12em);
-    filter: blur(12em);
+.bluelight-spot {
+    background-color: var(--galaxy-light-blue);
+}
+.bluelight-spot, .blue-spot {
+    -webkit-filter: blur(16em);
+    -moz-filter: blur(16em);
+    filter: blur(16em);
 }
 .space {
     background-color: transparent; 
@@ -168,13 +166,8 @@ img {
     content: "0" counter(section);
     margin-inline-end: 10px;
     font-size: 0.75em;
-    background: -webkit-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
-    background: -moz-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
-    background: -o-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
-    background: linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
+    font-weight: 500;
+    color: var(--galaxy-light-blue)
 }
 .nav-item a {
     text-decoration: none;
@@ -203,10 +196,10 @@ img {
     inset: 0;
     padding: 2px;
     border-radius: 50em;
-    background: -webkit-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
-    background: -moz-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
-    background: -o-linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
-    background: linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
+    background: -webkit-linear-gradient(to right, var(--galaxy-light-blue) 50%, white 200%);
+    background: -moz-linear-gradient(to right, var(--galaxy-light-blue) 50%, white 200%);
+    background: -o-linear-gradient(to right, var(--galaxy-light-blue) 50%, white 200%);
+    background: linear-gradient(to right, var(--galaxy-light-blue) 50%, white 200%);
     -webkit-mask: 
         linear-gradient(#fff 0 0) content-box, 
         linear-gradient(#fff 0 0);
@@ -217,7 +210,10 @@ img {
     mask-composite: exclude;
 }
 .nav-btn:hover {
-    background: linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
+    background: -webkit-linear-gradient(to right, var(--galaxy-light-blue) 50%, white 200%);
+    background: -moz-linear-gradient(to right, var(--galaxy-light-blue) 50%, white 200%);
+    background: -o-linear-gradient(to right, var(--galaxy-light-blue) 50%, white 200%);
+    background: linear-gradient(to right, var(--galaxy-light-blue) 50%, white 200%);
 }
 
 .logo .navbutton {
@@ -285,11 +281,11 @@ main {
     -webkit-box-shadow: inset 0px 18px 9px -16px rgba(255, 255, 255, 1);
     -moz-box-shadow: inset 0px 18px 9px -16px rgba(255, 255, 255, 1);
     box-shadow: inset 0px 18px 9px -16px rgba(255, 255, 255, 1);
-    background: linear-gradient(90deg, var(--galaxy-light-blue), transparent) var(--galaxy-light-pink);
+    background: var(--gradient-blue);
     transition: background-color 0.4s;
 }
 .color-btn:hover {
-    background-color: var(--galaxy-dark-blue);
+    background-color: rgb(2, 183, 255);
 }
 
 /* box article */
@@ -340,9 +336,6 @@ main {
     
     margin-left: auto;
     margin-right: auto;
-    -webkit-box-shadow: 0px 6px 21px 4px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 6px 21px 4px rgba(0,0,0,1);
-    box-shadow: 0px 6px 21px 4px rgba(0,0,0,1);
 }
 .article-img img {
     width: 100%;
@@ -455,13 +448,14 @@ main {
     linear-gradient(
         to bottom,
         var(--galaxy-light-blue),
-        var(--galaxy-light-pink)
+        var(--galaxy-dark-blue)
     ) 1 100%;
 }
 .about-text span {
     text-transform: uppercase;
     font-size: 0.75em;
-    color:var(--galaxy-light-pink);
+    color:var(--galaxy-light-blue);
+    font-weight: 500;
 }
 .about-text h3::before {
     content: "\25B6";
@@ -610,11 +604,11 @@ main {
 }
 .ribbon::before{
     top: 0px;
-    right: 15px;
-    border-color: var(--galaxy-light-pink);
+    right: 20px;
+    border-color: var(--galaxy-dark-blue);
 }
 .ribbon::after{
-    bottom: 15px;
+    bottom: 20px;
     left: 0px;
     border-color: var(--galaxy-light-blue);
 }
@@ -624,7 +618,7 @@ main {
     right: 0;
     transform: rotate(-45deg);
     width: 200px;
-    background: linear-gradient(to right, var(--galaxy-light-blue), var(--galaxy-light-pink));
+    background: var(--gradient-blue);
     padding: 10px 0;
     color: white;
     text-align: center;
