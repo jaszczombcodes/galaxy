@@ -1,6 +1,6 @@
 :root {
     --galaxy-dark: #0C0D0F;
-    --galaxy-dark-blue: rgb(14, 44, 110);
+    --galaxy-dark-blue: rgb(10, 47, 128);
     --galaxy-light-blue: hsl(216, 100%, 56%);
     --galaxy-light-pink: #f262ff;
     --light-text: rgb(240, 240, 240);
@@ -500,9 +500,69 @@ main {
     flex-direction: column;
     gap: 32px;
     width: 100%;
+    align-items: center;
 }
 .section-prices .header {
     width: 100%;
+}
+.how-to {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px;
+}
+.how-to-text {
+    max-width: 300px;
+}
+.how-to-text h3 {
+    font-size: 2em;
+}
+.how-to-graph {
+    align-items: center;
+    counter-reset: section;
+}
+.circle {
+    display: flex;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid var(--dark-text);
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 300;
+}
+.circle::before {
+    counter-increment: section;
+    content: counter(section) ".";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.circle p {
+    position: absolute;
+}
+.circle img {
+    position: absolute;
+    top: -4px;
+}
+.circle img, .circle p {
+    animation: upDown 3s ease-out 0s infinite normal forwards;
+}
+.circle:last-child img, .circle:last-child p, .circle:first-child img, .circle:first-child p {
+    animation: upDown 3s ease-out 1s infinite normal forwards;
+}
+.line {
+    display: flex;
+    width: 150px;
+    align-items: center;
+}
+.line svg path {
+    stroke-width: 1;
+    stroke-dasharray: 5,5;
+    stroke: var(--dark-text);
+    fill: none;
 }
 .plans {
     width: 100%;
