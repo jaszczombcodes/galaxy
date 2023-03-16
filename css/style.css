@@ -696,20 +696,22 @@ main {
 /* social proof */ 
 
 .section-social-proof {
-    flex-wrap: wrap;
     width: 100%;
     gap: min(32px, 1.75vw);
     color: white;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .section-social-proof .glassbox {
-    flex: 1 0 30%; /* explanation below */
     height: min(300px,19vw);
+    max-width: 420px;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
+    -webkit-box-shadow: inset 0px 1px 2px 1px rgba(255, 255, 255, 1);
+    -moz-box-shadow: inset 0px 1px 2px 1px rgba(255, 255, 255, 1);
+    box-shadow: inset 0px 1px 2px 1px rgba(255, 255, 255, 1);
 }
 .proof-container {
     display: flex;
@@ -720,8 +722,8 @@ main {
 .proof-image {
     display: flex;
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: -15px;
+    left: -15px;
     width: 150px;
     height: 150px;
     background-color: rgba(200, 200, 255, 0.05);
@@ -731,8 +733,8 @@ main {
     align-items: center;
     z-index: 10;
 
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 .proof-image img {
     width: 90%;
