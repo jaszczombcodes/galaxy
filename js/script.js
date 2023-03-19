@@ -90,6 +90,22 @@ function parallaxEffect () {
     })
 }
 
+function navbarChange() {
+    let value = window.scrollY;
+    if(value > 150) {
+        $("nav").css({
+            "background-color": "rgba(0, 0, 0, 0.5)",
+            "-webkit-backdrop-filter" : "blur(30px)",
+            "backdrop-filter" : "blur(30px)"
+        })
+    } else {
+        $("nav").css({
+            "background-color": "transparent"
+        })
+    }
+    
+}
+
  
 $(document).ready(function() {
     generateStars(100)
@@ -99,6 +115,8 @@ $(document).ready(function() {
 
 $(window).scroll(function() {
     parallaxEffect()
+    navbarChange()
+
 })
 
 
