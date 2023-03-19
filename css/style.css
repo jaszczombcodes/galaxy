@@ -21,11 +21,18 @@
     font-weight: bold;
 }
 
-
-.body {
+body {
     scroll-behavior: auto;
     font-family: 'Poppins', sans-serif;
     color: white;
+    line-height: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+article {
+    display: inline;
 }
 .container {
     width: 100%;
@@ -158,9 +165,6 @@ img {
     justify-content: space-evenly;
     counter-reset: section;
 }
-.nav-item {
-    font-family: 'Poppins', sans-serif;
-}
 .nav-item::before {
     counter-increment: section;
     content: "0" counter(section);
@@ -256,7 +260,6 @@ main {
     margin-block-start: 100px;
 } 
 .header h1, .header h2 {
-    color: white;
     text-align: center;
     text-transform: uppercase;
     font-family: Phonk;
@@ -269,9 +272,7 @@ main {
     padding: 30px 0;
 }
 .header p {
-    color: white;
     font-size: 1em;
-    font-family: 'Poppins', sans-serif;
     text-align: center;
     margin-block: 24px;
     line-height: 2;
@@ -302,7 +303,7 @@ main {
     -webkit-box-shadow: 1px -1px 10px -2px rgba(255,255,255,1);
     -moz-box-shadow: 1px -1px 10px -2px rgba(255,255,255,1);
     box-shadow: 1px -1px 10px -2px rgba(255,255,255,1);
-
+    color: black;
     animation: upDown 2s ease-out 0s infinite normal forwards;
 }
 
@@ -318,7 +319,6 @@ main {
 
 .article-text {
     flex-direction: column;
-    font-family: 'Poppins', sans-serif;
 }
 .article-text h2 {
     font-family: Phonk;
@@ -377,9 +377,7 @@ main {
 }
 .benefits {
     width: 100%;
-    color: white;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
     align-items: flex-start;
     justify-content: space-around;
 }
@@ -414,8 +412,6 @@ main {
     width: 100%;
     gap: 32px;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
 }
 .flexbox-left-2 {
     flex-direction: column;
@@ -466,11 +462,9 @@ main {
 /* counting section */
 
 .section-counting {
-    color: white;
     width: 100%;
     justify-content: space-around;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
     padding: 80px 60px;
 }
 .num-container {
@@ -586,8 +580,6 @@ main {
     backdrop-filter: blur(1px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
 }
 .plan-header {
     text-align: center;
@@ -627,8 +619,8 @@ main {
     color: 	transparent;
 }
 .greencheck {
-    color: white;
     font-weight: 400;
+    color: white;
 }
 .greencheck::before {
     content: '\002714';
@@ -685,7 +677,6 @@ main {
     width: 200px;
     background: var(--gradient-blue);
     padding: 10px 0;
-    color: white;
     text-align: center;
     text-transform: uppercase;
     font-size: 14px;
@@ -698,9 +689,7 @@ main {
 .section-social-proof {
     width: 100%;
     gap: min(32px, 1.75vw);
-    color: white;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -817,7 +806,6 @@ main {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif;
     color: var(--swiper-theme-color);
 }
 .autoplay-progress svg {
@@ -865,9 +853,7 @@ footer {
 .footer-content, .copyright-content {
     width: 90%;
     max-width: 1400px;
-    color: white;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
     justify-content: space-between;
 }
 .footer-content p, .footer-content label {
