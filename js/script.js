@@ -106,10 +106,21 @@ function navbarChange() {
     
 }
 
+function headerHomeMargin() {
+    let navHeight = parseInt($(".nav-static").height());
+    let headerHeight = parseInt($(".header-home").css("margin-block-start"));
+    console.log(navHeight + headerHeight)
+    $(".header-home").css({
+        "margin-block-start" : navHeight + headerHeight + "px"
+    })
+ //   console.log($(".nav-static").css('height'))
+}
+
  
 $(document).ready(function() {
     generateStars(100)
     starsPosition()
+    headerHomeMargin()
 
 });
 
